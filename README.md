@@ -2,7 +2,7 @@
 
 Chrome Bookmark to quickly hide a webpage and change it's title and favicon
 
-## Instalation
+## installation
 
 Create a bookmark with the following URL
 This bookmark will be to hide the webpage
@@ -15,19 +15,5 @@ Create a second bookmark with the following URL
 This bookmark will be to unhide the webpage
 
 ```
-javascript: (() => {
-	(function () {
-		var websitelogo = localStorage["INITIAL_ICON"] || "";
-		(function () {
-			var link =
-				document.querySelector("link[rel*='icon']") ||
-				document.createElement("link");
-			link.type = "image/png";
-			link.rel = "shortcut icon";
-			link.href = websitelogo;
-			document.getElementsByTagName("head")[0].appendChild(link);
-			document.title = localStorage["INITIAL_TITLE"] || "ERROR";
-		})();
-	})();
-})();
+javascript:void%20function(){javascript:(()=%3E{(function(){var%20a=localStorage.INITIAL_ICON||%22%22;(function(){var%20b=document.querySelector(%22link[rel*='icon']%22)||document.createElement(%22link%22);b.type=%22image/png%22,b.rel=%22shortcut%20icon%22,b.href=a,document.getElementsByTagName(%22head%22)[0].appendChild(b),document.title=localStorage.INITIAL_TITLE||%22ERROR%22})()})()})()}();
 ```
